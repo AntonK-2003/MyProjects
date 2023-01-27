@@ -9,7 +9,7 @@ import tensorflow as tf
 import idx2numpy
 import cv2
 
-image_file = "math_problem.png"
+image_file = "text.png"
 img = cv2.imread(image_file)
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 ret, thresh = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY)
@@ -26,10 +26,10 @@ for idx, contour in enumerate(contours):
         cv2.rectangle(output, (x, y), (x + w, y + h), (70, 0, 0), 1)
 
 
-"""cv2.imshow("Input", img)
+cv2.imshow("Input", img)
 cv2.imshow("Enlarged", img_erode)
 cv2.imshow("Output", output)
-cv2.waitKey(0)"""
+cv2.waitKey(0)
 
 def letters_extract(image_file: str, out_size=28) -> List[Any]:
     img = cv2.imread(image_file)
@@ -75,12 +75,12 @@ def letters_extract(image_file: str, out_size=28) -> List[Any]:
 
     return letters
 
-"""cv2.imshow("0", letters[0][2])
+cv2.imshow("0", letters[0][2])
 cv2.imshow("1", letters[1][2])
 cv2.imshow("2", letters[2][2])
 cv2.imshow("3", letters[3][2])
 cv2.imshow("4", letters[4][2])
-cv2.waitKey(0)"""
+cv2.waitKey(0)
 
 
 
