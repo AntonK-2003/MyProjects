@@ -77,10 +77,10 @@ def secant_method(a, b):
         return xn1
     except ValueError:
         print("Value not invalidate")
-if __name__ == '__main__':
+"""if __name__ == '__main__':
     x=float(input())
     a=float(input())
     b=float(input())
     F(x)
     F1(x)
-    Method(a, b)
+    secanT_method(a, b)"""
